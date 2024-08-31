@@ -13,6 +13,10 @@ public class Demo {
     public String healthTest( ) {
         return "Hello Demo";
     }
+    @GetMapping("other")
+    public String otherGet(){
+        return "Other Get";
+    }
     @PostMapping
     public String healthTestPost( ) {
         return "Hello Demo Post";
