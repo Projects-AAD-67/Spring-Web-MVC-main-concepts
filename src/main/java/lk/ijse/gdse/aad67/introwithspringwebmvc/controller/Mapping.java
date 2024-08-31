@@ -1,9 +1,6 @@
 package lk.ijse.gdse.aad67.introwithspringwebmvc.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("map")
@@ -15,5 +12,9 @@ public class Mapping {
     @GetMapping("test/**")
     public String helloMappingPart2(){
         return "Hello Mapping with **";
+    }
+    @PostMapping("/{name}/{value}")
+    public String helloMappingPart3(@PathVariable ("name") String myname,@PathVariable ("value") int value){
+        return "Path variables are "+myname+ " and "+value;
     }
 }
