@@ -12,8 +12,8 @@ public class Mapping {
     public String helloMappingPart1(){
         return "Hello Mapping";
     }
-    @GetMapping("test/*")
+    @GetMapping("test/**")
     public String helloMappingPart2(){
-        return "Hello Mapping with *";
+        return "Hello Mapping with **";
     }
 }
