@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestController
 @RequestMapping("map")
 public class Mapping {
-    @GetMapping("hello?")
+    @GetMapping("hello??")
     public String helloMapping(){
         return "Hello Mapping";
     }
