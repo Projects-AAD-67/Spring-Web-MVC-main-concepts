@@ -9,7 +9,11 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RequestMapping("map")
 public class Mapping {
     @GetMapping("hello??")
-    public String helloMapping(){
+    public String helloMappingPart1(){
         return "Hello Mapping";
+    }
+    @GetMapping("test/*")
+    public String helloMappingPart2(){
+        return "Hello Mapping with *";
     }
 }
