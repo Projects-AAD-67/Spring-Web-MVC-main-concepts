@@ -30,4 +30,8 @@ public class Mapping {
     public String helloMappingPart6(@RequestHeader ("X-city") String myCustomHeader,@RequestHeader ("Content-Type") String contentType){
          return "My city is "+myCustomHeader+ "and content type is "+contentType;
     }
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    public String helloMappingPart7(){
+        return "JSON mime type handle";
+    }
 }
