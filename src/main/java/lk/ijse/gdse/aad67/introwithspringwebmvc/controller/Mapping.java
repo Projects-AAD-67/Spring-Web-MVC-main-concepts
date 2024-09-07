@@ -26,4 +26,8 @@ public class Mapping {
     public String helloMappingPart5(@RequestParam ("name") String myName,@RequestParam ("age") int myAge){
        return "Path variables are "+myName+ " and "+myAge;
     }
+    @PostMapping(headers = {"X-city","Content-Type"})
+    public String helloMappingPart6(@RequestHeader ("X-city") String myCustomHeader,@RequestHeader ("Content-Type") String contentType){
+         return "My city is "+myCustomHeader+ "and content type is "+contentType;
+    }
 }
