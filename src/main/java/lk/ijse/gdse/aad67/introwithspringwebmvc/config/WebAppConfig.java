@@ -10,8 +10,5 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @ComponentScan(basePackages = "lk.ijse.gdse.aad67.introwithspringwebmvc")
 @EnableWebMvc
 public class WebAppConfig {
-    @Bean
-    public MyBean myBean(){
-        return new MyBean();
-    }
+
 }

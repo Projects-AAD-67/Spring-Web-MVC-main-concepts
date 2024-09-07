@@ -1,5 +1,6 @@
 package lk.ijse.gdse.aad67.introwithspringwebmvc.controller;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -20,5 +21,9 @@ public class Mapping {
     @PostMapping("/{id:S\\d{4}}")
     public String helloMappingPart4(@PathVariable("id") String id){
         return "Pattern accepted path variable is "+id;
+    }
+    @PostMapping(params = {"name","age"})
+    public String helloMappingPart5(@RequestParam ("name") String myName,@RequestParam ("age") int myAge){
+       return "Path variables are "+myName+ " and "+myAge;
     }
 }
